@@ -1,0 +1,14 @@
+<div>
+  <app-searchbar
+    (inStockChanged)="onInStockChecked($event)"
+    (searchModelChanged)="onSeachChanged($event)"
+  ></app-searchbar>
+</div>
+
+<div>
+  <app-product-table
+    [items]="items"
+    [searchValue]="searchValueFromSearchbar"
+    [isInStock]="isStockChecked"
+  ></app-product-table>
+</div>
